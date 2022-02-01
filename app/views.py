@@ -6,4 +6,10 @@ from django.shortcuts import render
 
 def home(request):
 
-    return render(request, 'app/home.html')
+    context = {
+
+        'title': 'Home',
+        'dict': {'data': 'data'},
+        'list': [1, 2, 3, 4, 5],
+    }
+    return render(request, 'app/home.html', context)
